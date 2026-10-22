@@ -1,0 +1,2 @@
+alias aa='vim ~/.aliases'
+alias vimrc='vim ~/.vimrc'

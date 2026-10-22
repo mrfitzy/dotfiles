@@ -1,30 +1,22 @@
-set ts=2
-set shiftwidth=2
-set expandtab
-set ai
 syntax on
-set smartindent
 set nu
-au BufRead,BufNewFile *.form set filetype=html
-au BufRead,BufNewFile *.sql set filetype=mysql
-au BufRead,BufNewFile htaccess set filetype=apache
-highlight Comment ctermfg=LightBlue
-map <CR> o<Esc>
-set ruler
-au BufRead,BufNewFile */Makefile set ts=8
-au BufRead,BufNewFile */Makefile set expandtab!
-au BufRead,BufNewFile */Makefile set shiftwidth=8
-au BufRead,BufNewFile *.grf set ts=8
-au BufRead,BufNewFile *.grf set expandtab!
-au BufRead,BufNewFile *.grf set shiftwidth=8
-au BufRead,BufNewFile *.py set ts=4
-au BufRead,BufNewFile *.py set shiftwidth=4
-au BufRead,BufNewFile *.h set ts=3
-au BufRead,BufNewFile *.h set shiftwidth=3
-au BufRead,BufNewFile *.cpp set ts=3
-au BufRead,BufNewFile *.cpp set shiftwidth=3
-au BufRead,BufNewFile *.sql set ts=3
-au BufRead,BufNewFile *.sql set shiftwidth=3
+set mouse=a
+set noswapfile
+set autoindent
+set smartindent
+set colorcolumn=80
 set hlsearch
-highlight Search ctermfg=Grey ctermbg=Blue
-nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+noh
+
+" enables pane dragging with mouse
+" https://github.com/microsoft/terminal/issues/5454#issuecomment-617452988
+set ttymouse=xterm2
+
+nnoremap ,<Space> :noh<CR>
+
+:command So so ~/.vimrc
+:command SO so ~/.vimrc
+
+au FileType c,cpp,h setlocal shiftwidth=2 tabstop=2 expandtab
+au FileType h setlocal shiftwidth=2 tabstop=2 expandtab
+au FileType zig setlocal shiftwidth=4 tabstop=4 expandtab
